@@ -7,40 +7,13 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="css/memorystyle.css">
 <link rel="stylesheet" href="css/main.css">
- <link rel="stylesheet" href="css/quizymemorygame.css">
 <script src="js/jquery.js"></script>
 <script src="js/index.js"></script>
 <script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/jquery.flip.min.js"></script>
-<script src="js/jquery.quizymemorygame.js"></script>
-<script src="js/jquery-ui.min.js"></script>
- <style>
-    body{
-      font-family:Helvetica, Arial, Verdana;
-      text-align: center;
-    }
-    
-    #tutorial-memorygame{
-      margin:auto;
-      width:50%;
-    }
-    
-    .text-style1{
-      font-size:14pt;
-      color:#56605f;
-      font-weight:normal;
-      text-shadow: 1px 1px 1px #fff;
-      margin:0;
-      line-height:24pt;
-    }
-    
-    .reset-button{
-      margin: 0 0 1.5em 0;
-    }
-    
-  </style>
-
+<script type="text/javascript" src="js/memorygame.js"></script>
+ 
 </head>
 <body>
 	
@@ -58,64 +31,118 @@
 		<div role="main" class="ui-content jqm-content">
 
 
-<div id="tutorial-memorygame" class="quizy-memorygame">
-      <ul>
-          <li class="match1">
-            <img src="images/memorygame/fruits/apple.jpg">
-          </li>
-          <li class="match2">
-            <img src="images/memorygame/fruits/banana.jpg">
-          </li>
-          <li class="match3">
-            <img src="images/memorygame/fruits/carrot.jpg">
-          </li>
-          <li class="match4">
-            <img src="images/memorygame/fruits/chilli.jpg">
-          </li>
-          <li class="match5">
-            <img src="images/memorygame/fruits/grapes.jpg">
-          </li>
-          <li class="match6">
-            <img src="images/memorygame/fruits/orange.jpg">
-          </li>
-		  <li class="match7">
-            <img src="images/memorygame/fruits/strawberry.jpg">
-          </li>
-		  <li class="match8">
-            <img src="images/memorygame/fruits/watermelon.jpg">
-          </li>
-          <li class="match1">
-            <img src="images/memorygame/fruits/apple.jpg">
-          </li>
-          <li class="match2">
-            <img src="images/memorygame/fruits/banana.jpg">
-          </li>
-          <li class="match3">
-            <img src="images/memorygame/fruits/carrot.jpg">
-          </li>
-          <li class="match4">
-            <img src="images/memorygame/fruits/chilli.jpg">
-          </li>
-          <li class="match5">
-            <img src="images/memorygame/fruits/grapes.jpg">
-          </li>
-          <li class="match6">
-            <img src="images/memorygame/fruits/orange.jpg">
-          </li>
-		  <li class="match7">
-            <img src="images/memorygame/fruits/strawberry.jpg">
-          </li>
-		  <li class="match8">
-            <img src="images/memorygame/fruits/watermelon.jpg">
-          </li>
-      </ul>
-    </div>
-    
-    
-    <div class="reset-button">
-      <a id="restart" href="">Reset game</a>
-    </div>
-</div>
+		
+	<section>
+	<div class="gameheader">
+			Cards flipped : <span class="num-turns">0</span>
+			&nbsp;&nbsp;&nbsp;&nbsp; Time : <span class="time">0</span>
+	</div>
+		<ul>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+			<li class="card">
+				<div class="back">
+					<div class="graphic"></div>
+				</div>
+				<div class="front"></div>
+			</li>
+		</ul>
+	</section>
+	
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false"
+			class="jqm-footer">
+		</div>
+
 <!-- /content -->
 		
 		<!-- panel -->
@@ -124,26 +151,12 @@
 			<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
 				<li data-icon="home"><a href="index.html" data-transition="slide">Home</a></li>
 				<li data-icon="attendance"><a href="tileswap.html" data-ajax="false" data-transition="slide">Tile-Swap</a></li>
-				<li data-icon="reports"><a href="memorygame.html" data-transition="slide">Memory-Game</a></li>
+        <li data-icon="reports"><a href="memorygame.html" data-transition="slide">Memory Game</a></li>
+        <li data-icon="match"><a href="matching.html" data-transition="slide">Matching</a></li>
+        <li data-icon="oddMan"><a href="oddManOut.html" data-transition="slide">Odd Man Out</a></li>
 			</ul>
 		</div>
 		<!-- /panel -->
-		
-		<div data-role="footer" data-position="fixed" data-tap-toggle="false"
-			class="jqm-footer">
-			<p>PuzzleBox 1.0</p>
-			<p>Copyright 2015</p>
-		</div>
-	<!-- /footer -->
-	
-	<script>
-    var quizyParams = {itemWidth: 100, itemHeight: 100, itemsMargin:5, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
-    $('#tutorial-memorygame').quizyMemoryGame(quizyParams);
-    $('#restart').click(function(){
-      $('#tutorial-memorygame').quizyMemoryGame('restart');
-      return false;
-    });
-  </script>
 	</div>
 </body>
 </html>
