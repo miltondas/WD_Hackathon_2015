@@ -1028,6 +1028,22 @@ html body .ui-group-theme-a .ui-bar-inherit {
 	margin-left: -14px !important;
 }
 
+.ui-icon-matching:after {
+	background-image: url(../images/matching.png);
+	height: 28px;
+	width: 28px;
+	background-size: 28px 28px;
+	margin-left: -14px !important;
+}
+
+.ui-icon-oddMan:after {
+	background-image: url(../images/oddManOut.png);
+	height: 28px;
+	width: 28px;
+	background-size: 28px 28px;
+	margin-left: -14px !important;
+}
+
 .ui-icon-schedule:after {
 	background-image: url(../images/schedule.png);
 	height: 28px;
@@ -1046,4 +1062,19 @@ html body .ui-group-theme-a .ui-bar-inherit {
 
 .ui-table-columntoggle-btn {
     display: none !important;
+}
+.oddManOutSection {
+	overflow: auto;
+	zoom:1;
+}
+	.oddManOutSection li {
+		float: left;
+		list-style: none;
+		margin: 0 10% 10% 0;
+	}
+.oddManOut {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	border-radius: 30%;
 }
