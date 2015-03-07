@@ -7,8 +7,16 @@ $(document).ready(function () {
 			this.getImages();
 		},
 
+		getRandomArbitrary: function (max) {
+		    return Math.floor(Math.random()*max);
+		},
+
 		getImages: function () {
-			var dir = "images/oddman/chairs/";
+			$(".quizy-mg-notification-fly").hide();
+			var imgDir = "images/oddman/";
+			var imagesFolderArray = ["chairs/", "animals/", "games/", "phones/", "obama/"];
+			var dirIndex = this.getRandomArbitrary(imagesFolderArray.length);
+			var dir = imgDir + imagesFolderArray[dirIndex];
 			var listOfImages = "";
 			var listImgArr = [];
 			var fileExt = [".gif", ".png", ".jpg"];
@@ -28,10 +36,8 @@ $(document).ready(function () {
 					listImgArr.sort(function () {
 						return 0.5 - Math.random();
 					});
-					console.log(listImgArr);
 
 					for(var i = 0; i < listImgArr.length; i++) {
-						console.log(listImgArr[i]);
 						listOfImages += listImgArr[i];
 					}
 					$("#imagesSection").html("<ul class='oddManOutSection'>" + listOfImages + "</ul>");
@@ -39,21 +45,27 @@ $(document).ready(function () {
 			});
 		},
 
+        //shows and hids the correct/wrong message after an action
+        showResIcon: function (type) {
+			var time = Math.round(4000/3);
+        	var element = (type === "correct") ? $("#quizy-mg-msgcorrect") : $("#quizy-mg-msgwrong");
+        	element.show().delay(time / 2).hide("explode", time / 2);
+        },
+
 		eventHandlers: function () {
+			var that = games.oddMan;
 			$("#imagesSection").on("click", "img", function (event) {
 				if(($(this).attr("data-about")).indexOf("odd") > -1) {
-					alert("Well Done! Good Job!");
+					that.showResIcon("correct");
 				} else {
-					alert("Ooops! Find the right Odd Man");
+					that.showResIcon("wrong");
 				}
 			});
 		}
 	};
-			$("#dialog").dialog({
-				autoOpen: false
-			});
-			$("#button").on("click", function() {
-				$("#dialog").dialog("open");
-			});
-			    games.oddMan.init();
+	$("#playOddManNow").click(function (event) {
+		$(this).html("Play With Another Set!");
+		$("#imagesSection").show();
+	    games.oddMan.init();
+	});
 });
