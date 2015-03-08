@@ -39,15 +39,15 @@ footer p {
 	font-weight: bold;
 }
 
-section {
+#gamecontainer {
 	width: 100%;
 }
 
-section ul {
+#gamecontainer ul {
 	margin-left : -4.5em;
 }
 
-section ul li {
+#gamecontainer ul li {
 	float: left;
 	margin: 0 0 30px 30px;
 }

@@ -1,11 +1,6 @@
-function trace(str)
-{
-    try {console.log(str);} catch(e){}
-}
-
 $(document).ready(function()
 {
-	var canAnimate = navigator.userAgent.indexOf("Safari") >= 0 || navigator.userAgent.indexOf("Chrome") >= 0;
+	var canAnimate = false;
 	
 	var path = 'images/memorygame/cards/';
 	var card_settings = [
@@ -42,7 +37,7 @@ $(document).ready(function()
 		if (val == parseInt(val))
 			val += ".0";
 			
-		$('section .time').html(val);
+		$('div .time').html(val);
 	}
 	
 	function on_animation_end(fn)
@@ -70,7 +65,7 @@ $(document).ready(function()
 		//$(this).css('-webkit-transform', 'rotate('+ ranDeg + 'deg)');
 		//$(this).css('-moz-transform', 'rotate('+ ranDeg + 'deg)');
 		
-		if (navigator.userAgent.indexOf("Safari") >= 0 && navigator.userAgent.indexOf("Chrome") < 0)
+		if (canAnimate)
 			$(this).addClass("shadow_hack");
 	});
 	
@@ -128,7 +123,7 @@ $(document).ready(function()
 				$(self).removeClass('customhover').addClass('selected');
 				current_cards.push($(this));
 
-				$('section .num-turns').html(++num_cards_turned);
+				$('div .num-turns').html(++num_cards_turned);
 			}
 			
 					

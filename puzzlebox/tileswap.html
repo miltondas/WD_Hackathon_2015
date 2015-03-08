@@ -47,12 +47,9 @@
 		var tileObj = function(gx, gy) {
 			// solvedGx and solvedGy are the grid coordinates
 			// of the tile in its 'solved' position.
-                var solvedGx = gx,
-                    solvedGy = gy,
+			var solvedGx = gx, solvedGy = gy,
 			// Left and top represent the equivalent css pixel positions.
-                    left = gx * tileSize,
-                    top = gy * tileSize,
-                    $tile = $("<div class='tile'></div>"),
+			left = gx * tileSize, top = gy * tileSize, $tile = $("<div class='tile'></div>"),
 
 			that = {
 				$element : $tile,
@@ -152,9 +149,12 @@
 		var shuffle = function() {
 			var randIndex = Math.floor(Math.random() * (numTiles - 1));
 			if (Math.floor(Math.random() * 2)) {
-                    moveTiles(tilesArray[emptyGx][(emptyGy + 1 + randIndex) % numTiles], false);
+				moveTiles(tilesArray[emptyGx][(emptyGy + 1 + randIndex)
+						% numTiles], false);
 			} else {
-                    moveTiles(tilesArray[(emptyGx + 1 + randIndex) % numTiles][emptyGy], false);
+				moveTiles(
+						tilesArray[(emptyGx + 1 + randIndex) % numTiles][emptyGy],
+						false);
 			}
 		};
 
@@ -201,7 +201,8 @@
 			$('#pic-frame').bind('tap', function(evt) {
 				var $targ = $(evt.target);
 				// Has a tile been tapped?
-                    if (!$targ.hasClass('tile')) return;
+				if (!$targ.hasClass('tile'))
+					return;
 				// If a tile has been tapped, then move the appropriate tile(s).
 				moveTiles($targ.data('tileObj'), true);
 				// Check if the puzzle is solved.
@@ -269,12 +270,11 @@ label img {
 
 		<div role="main" class="ui-content jqm-content">
 
-		<!-- <div class="ui-field-contain">
+			<!-- <div class="ui-field-contain">
 		<label for="imageurl">Choose Image:</label>
 		<input type='file' id="imageurl" accept="image/*" />
 		</div> -->
 			<div class="ui-field-contain">
-			<label for="difficulty">Choose Difficulty:</label>
 				<select name="difficulty" id="difficulty" data-native-menu="false">
 					<option value="3">Easy (9 Tiles)</option>
 					<option value="4">Normal (16 Tiles)</option>
@@ -283,33 +283,21 @@ label img {
 			</div>
 			<!-- Game page -->
 			<div align="center" id="game">
-		<div id="pic-frame"><div id="pic-guide"></div></div>
-		
+				<div id="pic-frame">
+					<div id="pic-guide"></div>
 				</div>
-	</br>
-	<a class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c" data-theme="c" id="play-button" href="#game" data-role="button"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Play!</span></span></a>
 
-		<!-- Game page -->
-    <!--div data-url="game" id="game" data-role="page" data-backbtn="false">
-        <div data-role="header" data-backbtn="false">
-            <h1>
-                TilePic
-            </h1>
 			</div>
-        <div data-role="content">
-            
-            <a href="#menu" data-role="button">Main Menu</a>
-        </div>
-    </div!-->
-    
-    <!-- Well done popup page -->
-    <div data-url="well-done" id="well-done" data-role="page">
-        <div data-role="header" data-backbtn="false">
-            <h1>
-                TilePic - Solved!
-            </h1>
-        </div>
-    </div>
+			<br> <a class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c"
+				data-theme="c" id="play-button" href="#game" data-role="button"><span
+				class="ui-btn-inner ui-btn-corner-all"><span
+					class="ui-btn-text">Play!</span></span></a>
+			<!-- Well done popup page -->
+			<div data-url="well-done" id="well-done" data-role="page">
+				<div data-role="header" data-backbtn="false">
+					<h1>TilePic - Solved!</h1>
+				</div>
+			</div>
 
 		</div>
 		<!-- /content -->
@@ -317,18 +305,22 @@ label img {
 		<div data-role="panel" class="jqm-navmenu-panel" data-position="left"
 			data-display="overlay" data-theme="a">
 			<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-				<li data-icon="home"><a href="index.html" data-transition="slide">Home</a></li>
-				<li data-icon="attendance"><a href="tileswap.html" data-ajax="false" data-transition="slide">Tile-Swap</a></li>
-				<li data-icon="reports"><a href="memorygame.html" data-transition="slide">Memory Game</a></li>
-                <li data-icon="matching"><a href="matching.html" data-transition="slide">Matching</a></li>
-                <li data-icon="oddMan"><a href="oddManOut.html" data-transition="slide">Odd Man Out</a></li>
+				<li data-icon="home"><a href="index.html"
+					data-transition="slide">Home</a></li>
+				<li data-icon="attendance"><a href="tileswap.html"
+					data-ajax="false" data-transition="slide">Tile-Swap</a></li>
+				<li data-icon="reports"><a href="memorygame.html"
+					data-transition="slide">Memory Game</a></li>
+				<li data-icon="matching"><a href="matching.html"
+					data-transition="slide">Matching</a></li>
+				<li data-icon="oddMan"><a href="oddManOut.html"
+					data-transition="slide">Odd Man Out</a></li>
 			</ul>
 		</div>
 		<!-- /panel -->
 
 		<div data-role="footer" data-position="fixed" data-tap-toggle="false"
-			class="jqm-footer">
-		</div>
+			class="jqm-footer"></div>
 		<!-- /footer -->
 	</div>
 </body>
