@@ -61,7 +61,7 @@ $(document).ready(function () {
 		}
 	};
 	$("#playOddManNow").click(function (event) {
-		$(this).html("Play With Another Set!");
+		$(this).html("Next Set!");
 		$("#imagesSection").show();
 	    games.oddMan.init();
 	});
