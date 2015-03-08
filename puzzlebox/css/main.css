@@ -1085,3 +1085,6 @@ html body .ui-group-theme-a .ui-bar-inherit {
 #imagesSection {
 	margin: 20px 0 0 0;
 }
+.matching .ui-btn {
+	margin:0 !important;
+}

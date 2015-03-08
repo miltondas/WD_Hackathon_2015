@@ -13,10 +13,10 @@
 <script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
   <style>
   .sortable  { list-style-type: none; margin: 0; padding: 0; width: 50%; }
-   .sortable li { margin: 0 3px 3px 3px; 
- height:48px ;
+   .sortable li { margin: 0 3px 15px 3px; 
+ height:75px ;
  cursor:pointer;
-  font-size: 1.2em;  width:48px; }
+  font-size: 1.2em;  width:85px; }
   .selected {
   border:1px solid red
   }
@@ -49,7 +49,7 @@
   var $leftSide = $("#sortable1");
   $.each(array,function(index,value){
 
-     var html = "<li id='1-"+value.lImage+"' desc='"+value.lText+"' class='ui-state-default'><img class='ui-btn' src='"+PATH1+value.lImage+"' alt='"+value.lImage+"' width='50px' /></li>";
+     var html = "<li id='1-"+value.lImage+"' desc='"+value.lText+"' class='ui-state-default'><img class='ui-btn' src='"+PATH1+value.lImage+"' alt='"+value.lImage+"' width='50px' height='50px' /></li>";
 	$leftSide.append(html);
   });
   }
@@ -65,7 +65,7 @@ while (i) { // same as while(i != 0)
 var $rightSide = $("#sortable2");
 $.each(array,function(index,value){
 
-     var html = "<li id='1-"+value.rImage+"' desc='"+value.rText+"' class='ui-state-default'><img class='ui-btn' src='"+PATH2+value.rImage+"' alt='"+value.rImage+"' width='50px' /></li>";
+     var html = "<li id='1-"+value.rImage+"' desc='"+value.rText+"' class='ui-state-default'><img class='ui-btn' src='"+PATH2+value.rImage+"' alt='"+value.rImage+"' width='50px' height='50px' /></li>";
 	$rightSide.append(html);
   });
   }
@@ -105,7 +105,7 @@ $.each(array,function(index,value){
   </script>
 </head>
 <body>
-  <div data-role="page" class="jqm-demos jqm-home">
+  <div data-role="page" class="jqm-demos jqm-home matching">
     <div data-role="header" class="jqm-header">
       <h2>
         <img src="images/sms-logo.png" alt="jQuery Mobile">
