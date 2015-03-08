@@ -40,7 +40,11 @@ footer p {
 }
 
 #gamecontainer {
-	width: 100%;
+	width : 18em;
+}
+
+.reset{
+	width : 17em;
 }
 
 #gamecontainer ul {
