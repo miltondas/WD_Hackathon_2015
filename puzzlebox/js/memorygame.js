@@ -59,12 +59,7 @@ $(document).ready(function()
 	{
 		$(this).data('card-id', card_settings[i].id);
 		$(this).find(".front").css('background', 'url(' + path + card_settings[i].graphic + ')');
-		
-		//var ranDeg = Math.round(Math.random()*16)-8;
-		
-		//$(this).css('-webkit-transform', 'rotate('+ ranDeg + 'deg)');
-		//$(this).css('-moz-transform', 'rotate('+ ranDeg + 'deg)');
-		
+	
 		if (canAnimate)
 			$(this).addClass("shadow_hack");
 	});
@@ -96,19 +91,6 @@ $(document).ready(function()
 			if ($(self).hasClass('selected'))
 				return;
 
-			/*if (current_cards.length == 0)
-			{
-				//$('#flip-sound-1')[0].currentTime = 0;
-				//$('#flip-sound-1')[0].play();
-				mySound.play();
-			}
-			else if (current_cards.length == 1)
-			{
-				//$('#flip-sound-2')[0].currentTime = 0;
-				//$('#flip-sound-2')[0].play();
-				mySound.play();
-			}*/
-	
 			if(current_cards.length < 2)
 			{
 				if(canAnimate)
@@ -138,6 +120,7 @@ $(document).ready(function()
 				{
 					window.clearInterval(timer_interval);
 					update_timer();
+					$('#welldone').append("<b style='color: green;'>Well Done! Puzzle completed!</b>");
 				}
 				
 				if(canAnimate)

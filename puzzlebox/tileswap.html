@@ -205,13 +205,15 @@
 					return;
 				// If a tile has been tapped, then move the appropriate tile(s).
 				moveTiles($targ.data('tileObj'), true);
+					
 				// Check if the puzzle is solved.
 				if (checkSolved()) {
+					$('#pic-frame').empty();
+					$('#pic-frame').append("<div id='pic-guide'><b style='color: green;'>Well-Done!</b>  <img src='"+ imageUrl+"' /> </div>");
 					// If puzzle solve, beep and vibrate.
 					phoneObject.beep(1);
 					phoneObject.vibrate(500);
 					// Pop up the well done screen.
-					$.mobile.changePage("#well-done", "pop");
 				}
 			});
 
@@ -292,13 +294,6 @@ label img {
 				data-theme="c" id="play-button" href="#game" data-role="button"><span
 				class="ui-btn-inner ui-btn-corner-all"><span
 					class="ui-btn-text">Play!</span></span></a>
-			<!-- Well done popup page -->
-			<div data-url="well-done" id="well-done" data-role="page">
-				<div data-role="header" data-backbtn="false">
-					<h1>TilePic - Solved!</h1>
-				</div>
-			</div>
-
 		</div>
 		<!-- /content -->
 		<!-- panel -->
